@@ -24,7 +24,7 @@ You will also have to relace the apiKey for Google Maps (it is located in the Go
 
 App is fetching the data from the api deployed on heroku. Data is being filtered by name of the location. 
 
-
+#Author and Disclaimers
 
 The author of this clone is  Piotr Kozłowski.
 
