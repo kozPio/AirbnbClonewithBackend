@@ -18,9 +18,14 @@ or connect your own database and uplode a sample (database for one city ) from t
 When you' ve got your search results you can click on any room and page for that room will be displayed with picutres, price,discription if availble(some data in db don't have one) and list of other rooms in the chosen location (excluding the currently displayed one)  when you click on one of the rooms in other rooms section curently displayed room will change to the one you clicked on and it will disapear from the other rooms also the room that was displayed before will now be included in the other rooms list.
 
 
+You will also have to relace the apiKey for Google Maps (it is located in the GoogleMap component)
+
 # Api
 
 App is fetching the data from the api deployed on heroku. Data is being filtered by name of the location. 
 
 
 
+The author of this clone is  Piotr Kozłowski.
+
+This web app is based on the airbnb and it serves only presentational purposes.
