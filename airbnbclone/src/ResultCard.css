@@ -1,0 +1,71 @@
+.resultCard{
+   display: flex; 
+   flex-direction: column;
+   position: relative;
+   height:250px;
+   width: 250px;
+   margin:20px;
+   border-radius: 6px;
+
+}
+
+.resultCard:hover{
+    opacity: 0.8;
+    background-color: rgb(241, 241, 241);
+}
+
+
+.resultCard > img{
+    object-fit: cover;
+    height: 50%;
+    width: 100%;
+    border-radius: 16px;
+}
+.resultCard__heartGray{
+    color:gray;
+}
+
+.resultCard__heartRed{
+    
+    color: red;
+}
+
+.resultCard > Button{
+    position: absolute;
+    top:10px;
+    right:0px;
+    width: auto;
+}
+
+.resultCard__ratingWstar{
+    display: flex;
+    margin-left: 10px;
+}
+.resultCard__rating{
+    font-size: 18px;
+    font-weight: 800;
+    margin-right:5px;
+}
+.resultCard__toCenter{
+    font-size: 12px;
+    margin-left:13px;
+}
+.resultCard__star{
+    color: violet;
+}
+
+.resultCard__description{
+    margin-left: 10px;
+    font-size: 18px;
+}
+
+.resultCard__price{
+    margin-left: 10px;
+    font-size: 20px;
+    font-weight: 800;
+    text-decoration: underline;
+}
+
+.resultCard__hide{
+    display: none;
+}

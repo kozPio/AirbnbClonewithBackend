@@ -1,0 +1,13 @@
+.card__container{
+    display: flex;
+    padding:30px;
+    
+}
+
+@media screen and (max-width: 736px){
+
+    .card__container{
+        flex-direction: column;
+        
+    }
+}

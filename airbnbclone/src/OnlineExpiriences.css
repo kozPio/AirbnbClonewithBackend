@@ -1,0 +1,300 @@
+*,*::before, *::after {box-sizing:border-box}
+
+
+.onlineExpiriences{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto ;
+    grid-template-areas: 
+    "header header header header"
+        "leftbox leftbox  rightTop1 rightTop2"
+        "leftbox leftbox  rightBottom rightBottom";
+    color:white;
+    background-color: black;
+    grid-row-gap: 25px;
+    grid-column-gap: 20px;
+    padding: 60px 60px 60px 80px;
+    object-fit: cover;
+}
+
+.header__exp{
+    grid-area: header;
+    color:white;
+    display: flex;
+    align-items: center;
+    
+}
+.header__exp > Button{
+    margin-bottom: 40px;
+    margin-left:auto;
+    border: 1px solid white;
+    border-radius:10px;
+    color:white;
+    text-transform: inherit !important;
+}
+
+.header__exp > Button:hover{
+background-color: gray;
+}
+
+.header__expText{
+    flex:0.60;
+}
+.header__expText > p{
+    margin-left: 0px;
+    font-size: 16px;
+}
+
+.left{
+    grid-area: leftbox;
+    border-radius: 16px;
+    position: relative;
+    /* background-color: rgb(34, 34, 34); */
+    
+}
+.left > img{
+    
+   /* height: 90% !important;
+   width: 100% !important;
+    */
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    border-radius: 16px;
+   
+    
+}
+
+.left > p{
+    position: absolute;
+    background-color: rgb(34, 34, 34);
+    bottom: 0;
+    object-fit: cover;
+    width: 100%;
+    height: 10%;
+    border-bottom-right-radius: 16px;
+   border-bottom-left-radius: 16px;
+}
+
+
+.topRightbox1{
+    position: relative;
+    grid-area: rightTop1;
+    border-radius: 16px;
+    background-color: rgb(34, 34, 34);
+    
+}
+.topRightbox1> img{
+    /* height: 100% !important;
+    width: 100% !important;
+    border-top-right-radius: 16px;
+    border-top-left-radius: 16px; */
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    border-radius: 16px;
+
+}
+
+
+
+.topRightbox2{
+    position: relative;
+    grid-area: rightTop2;
+    width: 100%;
+    border-radius: 16px;
+    background-color: rgb(34, 34, 34);
+}
+.topRightbox2> img{
+    /* height:100% !important;
+    width: 100% !important;
+    border-top-right-radius: 16px;
+    border-top-left-radius: 16px; */
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    border-radius: 16px;
+}
+
+.topRightbox2 div p{
+    font-size:  16px;
+
+}
+
+
+.bottomRight{
+    position: relative;
+    grid-area: rightBottom;
+    vertical-align: bottom;
+    border-radius: 16px;
+    background-color:rgb(34, 34, 34) ;
+}
+.bottomRight> img{
+    /* height: 100% !important;
+    width: 100% !important;
+  border-top-right-radius: 16px;
+  border-top-left-radius: 16px; */
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  border-radius: 16px;
+}
+
+
+.paragraphs{
+    position: absolute;
+    background-color: rgb(34, 34, 34);
+    bottom: 0;
+    object-fit: cover;
+    width: 100%;
+    height: 23%;
+    border-bottom-right-radius: 16px;
+   border-bottom-left-radius: 16px;
+   font-size: auto;
+   padding-left: 10px;
+}
+
+@media screen and (max-width: 900px)
+{
+    .onlineExpiriences{
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto ;
+        grid-template-areas: 
+        "header header header header header"
+        "leftbox leftbox  leftbox rightTop1 rightTop1"
+        "leftbox leftbox  leftbox rightTop2 rightTop2";
+        color:white;
+        background-color: black;
+        grid-row-gap: 15px;
+        grid-column-gap: 10px;
+        padding: 40px 40px 40px 60px;
+        object-fit: cover;
+    }
+    
+.header__exp{
+    grid-area: header;
+    color:white;
+    display: flex;
+    align-items: center;
+    
+}
+.header__exp > Button{
+    margin-bottom: 40px;
+    margin-left:auto;
+    border: 1px solid white;
+    border-radius:10px;
+    color:white;
+    text-transform: inherit !important;
+}
+
+.header__exp > Button:hover{
+background-color: gray;
+}
+
+.header__expText{
+    flex:0.60;
+}
+.header__expText > p{
+    margin-left: 0px;
+    font-size: 16px;
+}
+
+.left{
+    grid-area: leftbox;
+    border-radius: 16px;
+    position: relative;
+    /* background-color: rgb(34, 34, 34); */
+    
+}
+.left > img{
+    
+   /* height: 90% !important;
+   width: 100% !important;
+    */
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    border-radius: 16px;
+   
+    
+}
+
+.left > p{
+    position: absolute;
+    background-color: rgb(34, 34, 34);
+    bottom: 0;
+    object-fit: cover;
+    width: 100%;
+    height: 10%;
+    border-bottom-right-radius: 16px;
+    border-bottom-left-radius: 16px;
+    font-size: 12px;
+}
+
+
+.topRightbox1{
+    position: relative;
+    grid-area: rightTop1;
+    border-radius: 16px;
+    background-color: rgb(34, 34, 34);
+    
+}
+.topRightbox1> img{
+    /* height: 100% !important;
+    width: 100% !important;
+    border-top-right-radius: 16px;
+    border-top-left-radius: 16px; */
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    border-radius: 16px;
+
+}
+.topRightbox1 div p{
+    font-size:  12px;
+
+}
+
+.topRightbox2{
+    position: relative;
+    grid-area: rightTop2;
+    width: 100%;
+    border-radius: 16px;
+    background-color: rgb(34, 34, 34);
+}
+.topRightbox2> img{
+    /* height:100% !important;
+    width: 100% !important;
+    border-top-right-radius: 16px;
+    border-top-left-radius: 16px; */
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    border-radius: 16px;
+}
+
+.topRightbox2 div p{
+    font-size:  12px;
+
+}
+
+
+.bottomRight{
+    display: none;
+}
+}
+
+
+@media screen and (max-width: 1200px)  {
+    .topRightbox1 div p{
+        font-size:  12px;
+    
+    }
+
+    .topRightbox2 div p{
+        font-size:  12px;
+    
+    }
+
+}
