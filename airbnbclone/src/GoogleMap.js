@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { useGoogleMaps } from "react-hook-google-maps";
 import { useSelector } from 'react-redux';
-import './GoogleMap.css';
+import './scss/GoogleMap.scss';
 
 
 

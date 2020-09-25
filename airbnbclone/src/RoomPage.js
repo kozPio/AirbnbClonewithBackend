@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { useSelector } from 'react-redux'
-import './RoomPage.css'
+import './scss/RoomPage.scss'
 import StarIcon from '@material-ui/icons/Star';
 import ResultCard from './ResultCard'
 

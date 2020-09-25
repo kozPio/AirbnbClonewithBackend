@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import './Banner.css'
+import './scss/Banner.scss'
 import { Button } from '@material-ui/core';
 import SearchDate from './SearchDate';
 import { useHistory } from 'react-router-dom';

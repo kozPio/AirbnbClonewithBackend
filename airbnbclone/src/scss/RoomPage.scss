@@ -1,22 +1,27 @@
+@import './resets';
+@import './variables';
+
 
 .roomPage{
     display: flex;
     flex-direction: column;
-}
 
-.roomPage__title{
+    &__title{
     margin-left: 35px;
 }
+}
+
+
 
 .roomPage__headinfo{
     margin-left: 35px;
     display: flex;
     flex-direction: row;
-}
-.roomPage__headinfo p{
-    margin-right: 10px;
-}
 
+    p{
+        margin-right: 10px;
+    }
+}
 
 .roomPage__starIcon{
     color: violet;
@@ -27,9 +32,11 @@
     height: 50vh;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: auto ;
+    grid-template-rows: 1fr 1fr 1fr 1fr ;
     grid-template-areas: 
     "image1 image1 image2 image3"
+    "image1 image1 image2 image3"
+    "image1 image1  image4 image5"
     "image1 image1  image4 image5"
     ;
     
@@ -40,60 +47,53 @@
 .roomPage__image1{
     grid-area: image1;
     border-radius: 16px;
+
+    img{
+        @include imgProps();
+    }
     
 }
 
-.roomPage__image1 img{
-    object-fit: cover;
-    height: 100%;
-    width: 100%;
-    border-radius: 16px;
-}
 
 .roomPage__image2{
     grid-area: image2;
     border-radius: 16px;
+
+    img{
+        @include imgProps();
+    }
 }
-.roomPage__image2 img{
-    object-fit: cover;
-    height: 100%;
-    width: 100%;
-    border-radius: 16px;
-}
+
 
 .roomPage__image3{
     grid-area: image3;
     border-radius: 16px;
+
+    img{
+        @include imgProps();
+    }
 }
 
-.roomPage__image3 img{
-    object-fit: cover;
-    height: 100%;
-    width: 100%;
-    border-radius: 16px;
-}
 
 .roomPage__image4{
     grid-area: image4;
     border-radius: 16px;
+
+    img{
+        @include imgProps();
+    }
 }
-.roomPage__image4 img{
-    object-fit: cover;
-    height: 100%;
-    width: 100%;
-    border-radius: 16px;
-}
+
 
 .roomPage__image5{
     grid-area: image5;
     border-radius: 16px;
+
+    img{
+        @include imgProps();
+    }
 }
-.roomPage__image5 img{
-    object-fit: cover;
-    height: 100%;
-    width: 100%;
-    border-radius: 16px;
-}
+
 
 
 .imageHover:hover{
@@ -104,12 +104,12 @@
     margin-left: auto;
     margin-right:30px;
     height: 50px;
-    border: 1px solid lightgray;
+    border: $border;
     border-radius: 6px;
 }
 
 .roomPage__price{
-    border-bottom: 1px solid lightgray;
+    border-bottom: $border;
 }
 
 
@@ -118,7 +118,7 @@
     margin-left: 15%;
     margin-right: 15%;
     background-color: rgb(253, 253, 253);
-    color: black;
+    color: $primary-second;
     border-radius: 16px;
     padding: 30px;
     
@@ -127,22 +127,23 @@
 .roomPage__descriptionTitle{
     text-align: center;
     margin-bottom: 10px;
-    font-weight: bold;
+    font-weight: weight(bold);
 }
 
 .roomPage__otherResults{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+
+    @include mobile($mobile){
+        justify-content: center;
+
+    }
     
 }
 .roomPage__otherResultsHeader{
     text-align: center;
 }
 
-@media screen and (max-width: 736px){
-    .roomPage__otherResults{
-        justify-content: center;
-    }
-}
+
 

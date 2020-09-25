@@ -1,7 +1,11 @@
+@import './resets';
+@import './variables';
+
+
 .card{
     display: flex;
     flex-direction: column;
-    border-radius: 10px;
+    border-radius: $border-radius;
     overflow: hidden;
     box-shadow: 0px 6px 18px -9px rgba(0,0,0, 0.75);
     transition: transform 100ms ease-in;
@@ -17,14 +21,14 @@
 
 .image{
     object-fit: fill;
-    min-width: 300px;
-    min-height: 200px;
+    min-width: 15vw;
+    min-height: 15vh;
     width: 100%;
     
 }
 .card__info{
  margin-top: -9px;
- border-radius:10px;
+ border-radius: $border-radius;
  padding: 20px;
  padding-top: 20px;
  border:1;
@@ -32,13 +36,13 @@
 }
 .title{
     font-size: 18px;
-    font-weight: 600;
+    font-weight: weight(medium);
  
 }
 
 .description{
-    font-size: 14px;
-    font-weight: 300;
+    font-size: size(medium);
+    font-weight: weight(regular);
     margin-top: 8px;
     margin-bottom: 8px;
     color: gray;

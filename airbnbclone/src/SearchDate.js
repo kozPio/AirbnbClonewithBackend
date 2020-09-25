@@ -2,7 +2,7 @@ import { DateRangePicker } from 'react-date-range';
 import React, { useState } from 'react';
 import 'react-date-range/dist/styles.css';
 import 'react-date-range/dist/theme/default.css';
-import './SearchDate.css'
+import './scss/SearchDate.scss'
 import PeopleIcon from '@material-ui/icons/People';
 import { Button } from '@material-ui/core';
 import { useHistory } from 'react-router';
@@ -90,7 +90,6 @@ function SearchDate() {
                 onChange={handleSelect}
             />
 
-
             <h2>Liczba Gości
                 <PeopleIcon />
             </h2>
@@ -98,6 +97,7 @@ function SearchDate() {
                 defaultValue={2}
                 type="number" />
             <Button onClick={getLocation}>Szukaj w Airbnb</Button>
+
         </div>
 
 

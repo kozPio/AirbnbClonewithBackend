@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import './Header.css'
+import './scss/Header.scss'
 import SearchIcon from '@material-ui/icons/Search';
 import LanguageIcon from '@material-ui/icons/Language';
 import { Avatar, IconButton } from '@material-ui/core';
@@ -8,6 +8,7 @@ import { Link, useHistory } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import roomdata from './actions/setingRooms';
 import setingInput from './actions/settingInput'
+import MoreVertIcon from '@material-ui/icons/MoreVert';
 
 
 function Header() {
@@ -15,6 +16,8 @@ function Header() {
     const [input, setInput] = useState("")
     const history = useHistory();
     const dispatcher = useDispatch()
+    const [showMenu, setShowMenu] = useState(false)
+
 
 
 
@@ -82,6 +85,22 @@ function Header() {
 
     }
 
+    const toggleMenu = () => {
+        const hamburger = document.querySelector('.header__right__btn__burger')
+        const nav = document.querySelector('.header__right__mobileNav')
+        const menuNav = document.querySelector('.header__right__mobileNav__menu')
+        if (!showMenu) {
+            hamburger.classList.add('open');
+            nav.classList.add('open');
+            menuNav.classList.add('open')
+            setShowMenu(!showMenu)
+        } else {
+            hamburger.classList.remove('open')
+            nav.classList.remove('open');
+            menuNav.classList.remove('open')
+            setShowMenu(!showMenu)
+        }
+    }
 
     return (
         <div className="header">
@@ -105,7 +124,22 @@ function Header() {
                 <LanguageIcon />
                 <ExpandMoreIcon />
                 <Avatar />
+
+
             </div>
+
+            <div className="header__right__btn" onClick={toggleMenu}>
+                <span className="header__right__btn__burger"></span>
+
+            </div>
+
+            <div className="header__right__mobileNav">
+                <div className="header__right__mobileNav__menu">
+                    <div className="header__right__mobileNav__tekst">Zostań Gospodarzem</div>
+                    <div className="header__right__mobileNav__tekst"> Zmień język </div>
+                </div>
+            </div>
+
 
         </div>
     )

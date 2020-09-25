@@ -1,5 +1,5 @@
 import React from 'react';
-import './SearchResults.css';
+import './scss/SearchResults.scss';
 import ResultCard from './ResultCard';
 import { useSelector } from 'react-redux';
 import GoogleMap from './GoogleMap'

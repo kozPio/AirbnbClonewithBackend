@@ -1,3 +1,9 @@
+@import './resets';
+@import './variables';
+
+
+
+
 .resultCard{
    display: flex; 
    flex-direction: column;
@@ -6,21 +12,34 @@
    width: 250px;
    margin:20px;
    border-radius: 6px;
+   box-shadow: 0 1px 3px rgba(0,0,0, 0.12);
 
-}
-
-.resultCard:hover{
+   &:hover{
     opacity: 0.8;
     background-color: rgb(241, 241, 241);
-}
+   }
 
-
-.resultCard > img{
+   img{
     object-fit: cover;
     height: 50%;
     width: 100%;
     border-radius: 16px;
+    cursor: pointer;
 }
+
+Button{
+    position: absolute;
+    top:10px;
+    right:0px;
+    width: auto;
+    
+}
+}
+
+.resultCard__wholeDescription{
+    cursor: pointer;
+}
+
 .resultCard__heartGray{
     color:gray;
 }
@@ -30,24 +49,19 @@
     color: red;
 }
 
-.resultCard > Button{
-    position: absolute;
-    top:10px;
-    right:0px;
-    width: auto;
-}
+
 
 .resultCard__ratingWstar{
     display: flex;
     margin-left: 10px;
 }
 .resultCard__rating{
-    font-size: 18px;
-    font-weight: 800;
+    font-size: size(large);
+    font-weight: weight(bold);
     margin-right:5px;
 }
 .resultCard__toCenter{
-    font-size: 12px;
+    font-size: size(small);
     margin-left:13px;
 }
 .resultCard__star{
@@ -56,13 +70,13 @@
 
 .resultCard__description{
     margin-left: 10px;
-    font-size: 18px;
+    font-size: size(large);
 }
 
 .resultCard__price{
     margin-left: 10px;
-    font-size: 20px;
-    font-weight: 800;
+    font-size: size(xlarge);
+    font-weight: weight(bold);
     text-decoration: underline;
 }
 

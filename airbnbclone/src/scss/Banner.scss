@@ -1,0 +1,102 @@
+@import './resets';
+@import './variables';
+
+
+
+
+.banner{
+    background: url("https://a0.muscache.com/im/pictures/4b5b2c9e-9d97-4fb7-8826-1529dacb13df.jpg?im_w=1920" ) center center; 
+    background-repeat: no-repeat;
+    position: relative;
+    min-height: 30vh;
+
+
+    &::before{
+        content: '';
+        position: absolute;
+        top:0;
+        left:0;
+        right:0;
+        bottom: 0;
+        background-color: rgba(0,0,0,0.1);
+    }
+    
+}
+
+
+
+
+.banner__search{
+    @include flex(column, flex-start, stretch);
+
+}
+
+
+.banner__searchButton{
+    background-color:$primary-color !important;
+    color:$airbnb-color !important;
+    font-weight: weight(bold) !important;
+    text-transform: inherit !important;
+
+    &:hover{
+        background-color: $airbnb-color !important;
+        color: $primary-color !important;
+    }
+}
+
+
+
+.banner__left{
+    align-items: flex-end;
+    padding-top: 10vh;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    max-width: 40vw;
+    
+    color: $primary-color;
+    min-height: 360px;
+
+    h2 {
+        margin-bottom: 10px;
+    }
+
+    h5 {
+        font-weight: weight(regular);
+    }
+
+    Button{
+        margin-top: 10px ;
+        background-color: $airbnb-color;
+        color: $primary-color ;
+        text-transform: inherit;
+        font-weight: weight(bold);
+
+       
+
+    }
+    
+    Button:hover{
+        background-color:$primary-color;
+        color:$airbnb-color;
+        
+    }
+
+    @include mobile($mobile){
+        max-width: 100vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        
+    }
+    
+    
+}
+
+
+
+
+
+
+/* https://a0.muscache.com/im/pictures/4b5b2c9e-9d97-4fb7-8826-1529dacb13df.jpg?im_w=1920 */
+/* https://trendphoto.com.au/wp-content/uploads/2019/04/copyright-trend-photography-south-coast-nsw-real-estate-photographer-videographer-45-banner.jpg */

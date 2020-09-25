@@ -1,5 +1,5 @@
 import React from 'react'
-import './ResultCard.css'
+import './scss/ResultCard.scss'
 import StarIcon from '@material-ui/icons/Star';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import { useState } from 'react';
@@ -20,20 +20,23 @@ function ResultCard({ image, description, rating, price, toCenter, index }) {
     }
 
     return (
-        <div id={index} className="resultCard" onClick={getRoomPage}>
+        <div id={index} className="resultCard" >
 
-            <img src={image} alt="" />
+            <img src={image} alt="" onClick={getRoomPage} />
             <Button
                 onClick={() => setShowRedHeart(!showRedHeart)} >
                 {<FavoriteIcon className={!showRedHeart ? "resultCard__heartGray" : "resultCard__heartRed"} />}
             </Button>
-            <div className="resultCard__ratingWstar">
-                <p className="resultCard__rating">{(rating === '0' || rating === null) ? '4' : rating / 2}</p>
-                <StarIcon className="resultCard__star" />
+            <div className="resultCard__wholeDescription" onClick={getRoomPage}>
+                <div className="resultCard__ratingWstar" >
+                    <p className="resultCard__rating">{(rating === '0' || rating === null) ? '4' : rating / 2}</p>
+                    <StarIcon className="resultCard__star" />
+                </div>
+                <p className="resultCard__description">{description}</p>
+                {toCenter !== '' ? <p className="resultCard__toCenter">{toCenter}</p> : null}
+                <p className="resultCard__price">{price}/noc</p>
             </div>
-            <p className="resultCard__description">{description}</p>
-            {toCenter !== '' ? <p className="resultCard__toCenter">{toCenter}</p> : null}
-            <p className="resultCard__price">{price}/noc</p>
+
         </div>
     )
 }

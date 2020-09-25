@@ -1,5 +1,5 @@
 import React from 'react';
-import './Home.css';
+import './scss/Home.scss';
 import Banner from './Banner';
 import Card from './Card';
 import OnlineExpiriences from './OnlineExpiriences';

@@ -1,0 +1,208 @@
+@import './resets';
+@import './variables';
+
+@mixin pTag($height){
+    position: absolute;
+        background-color: rgb(34, 34, 34);
+        bottom: 0;
+        object-fit: cover;
+        width: 100%;
+        height: $height;
+        border-bottom-right-radius: 16px;
+        border-bottom-left-radius: 16px;
+        font-size: size(large);
+        padding-left: 10px;
+        padding-top: 5px;
+}
+
+
+@mixin smallSizes(){
+    @include mobile($laptop) {
+        font-size: size(small);
+        height: 25%;
+        }
+
+
+    @include mobile($mobile) {
+        height: 20%;
+        font-size: size(medium);
+       }
+}
+
+.onlineExpiriences{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto ;
+    grid-template-areas: 
+    "header header header header"
+        "leftbox leftbox  rightTop1 rightTop2"
+        "leftbox leftbox  rightBottom rightBottom";
+    color:$primary-color;
+    background-color: black;
+    grid-row-gap: 25px;
+    grid-column-gap: 20px;
+    padding: 60px 60px 60px 80px;
+    object-fit: cover;
+
+    @include mobile($ipad){
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+        "header header header header header"
+        "leftbox leftbox  leftbox rightTop1 rightTop1"
+        "leftbox leftbox  leftbox rightTop2 rightTop2";
+        grid-row-gap: 15px;
+        grid-column-gap: 10px;
+        padding: 40px 40px 40px 60px;
+    }
+
+    @include mobile($mobile){
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+        "header header"
+        "leftbox leftbox"
+        "leftbox leftbox"
+        "rightTop1 rightTop1"
+        "rightTop2 rightTop2";
+        
+    }
+}
+
+.header__exp{
+    grid-area: header;
+    color:$primary-color;
+    display: flex;
+    align-items: center;
+    Button{
+        margin-bottom: 40px;
+        margin-left:auto;
+        border: 1px solid white;
+        border-radius:10px;
+        color:$primary-color;
+        text-transform: inherit !important;
+
+        @include mobile($mobile){
+            font-size: size(xsmall) !important;
+            margin: 10px 0;
+        }
+    }
+
+    Button:hover{
+        background-color: gray;
+        }
+    @include mobile($mobile){    
+            flex-direction: column;
+
+            h1 {
+                text-align: center;
+            }
+        }
+}
+
+
+.header__expText{
+    flex:0.60;
+
+    p{
+        margin-left: 0px;
+        font-size: size(big);
+
+        @include mobile($mobile){
+            font-size: size(xsmall);
+        }
+    }
+
+    @include mobile($mobile){
+        flex: 0.80;
+
+        h1 {
+            font-size: size(large);
+        }
+    }
+}
+
+
+.left{
+    grid-area: leftbox;
+    border-radius: 16px;
+    position: relative;
+    
+    img{
+        @include imgProps();   
+     }
+
+     p{
+        @include pTag(7.5%);
+        
+       @include mobile($mobile) {
+        font-size: size(small);
+        height: 15%;
+       }
+    }
+    
+}
+
+
+.topRightbox1{
+    position: relative;
+    grid-area: rightTop1;
+    border-radius: 16px;
+    background-color: rgb(34, 34, 34);
+
+    p{
+        @include pTag(17%);
+
+       @include smallSizes();
+    }
+
+    img{
+        @include imgProps();
+    
+    }
+    
+}
+
+.topRightbox2{
+    position: relative;
+    grid-area: rightTop2;
+    width: 100%;
+    border-radius: 16px;
+    background-color: rgb(34, 34, 34);
+
+    p{
+        @include pTag(17%);
+        
+        @include smallSizes();
+
+    }
+
+    img{
+        @include imgProps();
+    }
+}
+
+
+.bottomRight{
+    position: relative;
+    grid-area: rightBottom;
+    vertical-align: bottom;
+    border-radius: 16px;
+    background-color:rgb(34, 34, 34) ;
+
+    @include mobile($ipad){
+        display: none;
+    }
+
+    p{
+        @include pTag(15%);
+        
+
+       @include mobile($mobile) {
+        font-size: size(small);
+       }
+    }
+
+    img{
+        @include imgProps();
+      }
+}
+

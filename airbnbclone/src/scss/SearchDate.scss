@@ -1,0 +1,56 @@
+@import './resets';
+@import './variables';
+
+
+
+.search{
+    position: absolute;
+    top: 35px;
+    left: 25%;
+    width:100vw;
+
+    h2{
+
+        @include flex(row, space-between, center);
+        width: 559px;
+        padding: 10px;
+        background-color: $primary-color;
+        position: absolute;
+        left: 0;
+        top: 340px;
+    }
+}
+
+
+.search > input{
+width: 559px;
+padding:20px;
+position: absolute;
+left: 0;
+top: 390px;
+border: none;
+
+&:focus{
+    outline-width: 0;
+}
+}
+
+
+
+.search > Button{
+    position: absolute;
+    left:0;
+    top:435px;
+    text-transform: inherit !important;
+    background-color: $airbnb-color;
+    color: $primary-color;
+    width:559px;
+
+    &:hover{
+        color: $airbnb-color;
+        background-color: $primary-color;
+        
+    }
+
+}
+
