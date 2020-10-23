@@ -29,3 +29,7 @@ App is fetching the data from the api deployed on heroku. Data is being filtered
 The author of this clone is  Piotr Kozłowski.
 
 This web app is based on the airbnb and it serves only presentational purposes.
+
+
+
+#Just testing git
